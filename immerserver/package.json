@@ -1,0 +1,16 @@
+{
+  "name": "immerserver",
+  "version": "0.0.1",
+  "description": "Server for immerse app",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Tom Hutman",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "rss-parser": "^3.7.0"
+  }
+}
