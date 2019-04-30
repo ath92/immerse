@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 const cors = require('cors');
-app.use(cors);
+app.use(cors());
 
 const port = 3000;
 
@@ -11,9 +11,8 @@ const parser = new Parser();
  
 app.get('/', async (req, res) => {
     console.log('parsing NOS jeugdjournaal');
-    // const feed = await parser.parseURL('http://feeds.nos.nl/nosnieuwsalgemeen');
-    console.log(feed);
-    // res.end(JSON.stringify(feed));
+    const feed = await parser.parseURL('http://feeds.feedburner.com/jeugdjournaal?format=xml');
+    res.end(JSON.stringify(feed));
 });
 
 app.listen(port, () => console.log(`Immerserver listening on port ${port}!`));
